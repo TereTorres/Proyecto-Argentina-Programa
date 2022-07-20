@@ -1,5 +1,6 @@
 .row{
     padding: 25px;
+    width: 50%;
 }
 h2{
     font-family: 'Arial Narrow', Arial, sans-serif;
@@ -13,4 +14,7 @@ ul{
 }
 h4,p{
     display: inline;
+}
+div{
+
 }
