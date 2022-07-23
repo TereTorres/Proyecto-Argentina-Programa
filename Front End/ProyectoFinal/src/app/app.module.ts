@@ -11,6 +11,7 @@ import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { CircleProgressComponent } from './circle-progress/circle-progress.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
     ExperienciaComponent,
     CuerpoComponent,
     CircleProgressComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
