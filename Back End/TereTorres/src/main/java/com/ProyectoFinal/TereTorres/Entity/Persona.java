@@ -1,4 +1,4 @@
-package com.portfolio.TereTorres.entity;
+package com.ProyectoFinal.TereTorres.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter
+@Getter @Setter 
 @Entity
 public class Persona {
     
@@ -20,22 +20,13 @@ public class Persona {
     @NotNull
     @Size(min=1, max=50, message="No cumple con la longitud")
     private String nombre;
+    
     @NotNull
     @Size(min=1, max=50, message="No cumple con la longitud")
     private String apellido;
-    /*@NotNull*/
+    
+    
     @Size(min=1, max=50, message="No cumple con la longitud")
     private String img;
-
-    public Persona(Long idPersona, String nombre, String apellido, String img) {
-        this.idPersona = idPersona;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.img = img;
-    }
-
-    public Persona() {
-    }
-    
     
 }
