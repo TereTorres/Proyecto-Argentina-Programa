@@ -1,9 +1,11 @@
 package com.ProyectoFinal.TereTorres.Controller;
 
+
 import com.ProyectoFinal.TereTorres.Entity.Persona;
 import com.ProyectoFinal.TereTorres.Interface.IPersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +27,7 @@ public class PersonaController {
         return iPersonaService.getPersona();
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/personas/crear")
     public String createPersona(@RequestBody Persona per){
         
@@ -32,6 +35,7 @@ public class PersonaController {
         return "Persona creada correctamente";
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("personas/borrar/{id}")
     public String deletePersona(@PathVariable Long id){
         
@@ -39,6 +43,7 @@ public class PersonaController {
         return "Persona borrada correctamente";
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("personas/editar/{id}")
     public Persona editPersona(@PathVariable Long id,
                                 @RequestParam("nombre") String nombre,

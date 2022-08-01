@@ -4,6 +4,7 @@ import com.ProyectoFinal.TereTorres.Entity.Persona;
 import java.util.List;
 
 
+
 public interface IPersonaService {
     
     public List<Persona> getPersona();
