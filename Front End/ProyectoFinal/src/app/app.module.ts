@@ -10,7 +10,6 @@ import { HeaderComponent } from './header/header.component';
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 import { EducacionComponent } from './educacion/educacion.component';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
-import { CuerpoComponent } from './cuerpo/cuerpo.component';
 import { CircleProgressComponent } from './circle-progress/circle-progress.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { FooterComponent } from './footer/footer.component';
@@ -18,6 +17,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { interceptorProvider } from './service/interceptor-service';
+import { NuevaExperienciaComponent } from './experiencia/nueva-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +26,12 @@ import { interceptorProvider } from './service/interceptor-service';
     AcercaDeComponent,
     EducacionComponent,
     ExperienciaComponent,
-    CuerpoComponent,
     CircleProgressComponent,
     ProyectosComponent,
     FooterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    NuevaExperienciaComponent
     ],
   imports: [
     BrowserModule,

@@ -15,3 +15,10 @@ ul{
 h4,p{
     display: inline;
 }
+.btn{
+    background-color: #a1b5cb;
+    border-color: #a1b5cb;
+}
+.container{
+    padding: 10px;
+}

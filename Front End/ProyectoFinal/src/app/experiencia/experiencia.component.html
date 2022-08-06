@@ -1,27 +1,35 @@
 <div class="row">
-    <h2>Experiencia Laboral</h2>
-    <div >
-        <ul>
-            <li type="square">
-                <h3>Trabajo 1</h3>
-                <h5>2000-2000</h5>
-                <h4>Cargo: </h4><p>texto</p>
-            </li>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                 Nemo architecto consequuntur qui quia in similique, saepe, 
-                 enim quas necessitatibus corporis error distinctio explicabo
-                  veritatis nesciunt a optio obcaecati perspiciatis eaque.</p>
-        </ul>
-        <ul>
-            <li type="square">
-                <h3>Trabajo 1</h3>
-                <h5>2000-2000</h5>
-                <h4>Cargo: </h4><p>texto</p>
-            </li>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                 Nemo architecto consequuntur qui quia in similique, saepe, 
-                 enim quas necessitatibus corporis error distinctio explicabo
-                  veritatis nesciunt a optio obcaecati perspiciatis eaque.</p>
-        </ul>
+    <h2 class="col-lg-12">Experiencia Laboral</h2>
+    <div class="col-lg-12">
+        <button class="btn btn-primary btn-lg"
+        style="padding-left: 2.5rem; padding-right: 2.5rem;" type="button" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva Experiencia
+        </button>
+    </div>
+    
+    <div class="container">
+        <table>
+            
+                <tr *ngFor="let Experiencia of expe">
+                    <th>
+                        <h3>{{Experiencia.nombreExp}}</h3>
+                    </th>
+                <tr *ngFor="let Experiencia of expe">
+                    <th>
+                        <h5>{{Experiencia.anioIngreso}}-{{Experiencia.anioEgreso}}</h5>
+                    </th>
+                </tr>
+                <tr *ngFor="let Experiencia of expe">
+                    <th>
+                        <h4>Cargo: </h4><p>{{Experiencia.cargoExp}}</p>
+                    </th>
+                </tr>
+                <tr *ngFor="let Experiencia of expe">
+                    <th>
+                        <h6>{{Experiencia.descripcionExp}}</h6>
+                    </th>
+                </tr>
+            
+        </table>
     </div>
 </div>
