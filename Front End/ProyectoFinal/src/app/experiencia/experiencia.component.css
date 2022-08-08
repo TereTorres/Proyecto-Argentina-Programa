@@ -18,7 +18,15 @@ h4,p{
 .btn{
     background-color: #a1b5cb;
     border-color: #a1b5cb;
+    padding: 5px;
 }
-.container{
-    padding: 10px;
+.btn-sec{
+    background-color: white;
+    border-color: white;
+}
+.bi{
+    color: #a1b5cb;
+}
+.bi-trash3-fill{
+    color: rgb(150, 19, 19);
 }
