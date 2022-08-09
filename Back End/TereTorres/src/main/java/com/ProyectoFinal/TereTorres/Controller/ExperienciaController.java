@@ -42,7 +42,7 @@ public class ExperienciaController {
         if(impExperienciaService.existsByNombreExp(dtoExperiencia.getNombreExp()))
             return new ResponseEntity(new Mensaje("La experiencia ya existe"), HttpStatus.BAD_REQUEST);
         
-        Experiencia experiencia = new Experiencia(dtoExperiencia.getNombreExp(), dtoExperiencia.getAñoIngreso(), dtoExperiencia.getAñoEgreso(),
+        Experiencia experiencia = new Experiencia(dtoExperiencia.getNombreExp(), dtoExperiencia.getAnioIngreso(), dtoExperiencia.getAnioEgreso(),
                 dtoExperiencia.getCargoExp(), dtoExperiencia.getDescripcionExp());
         impExperienciaService.save(experiencia);
         
@@ -70,8 +70,8 @@ public class ExperienciaController {
         
         Experiencia exp = impExperienciaService.getOne(id).get();
         exp.setNombreExp(dtoExperiencia.getNombreExp());
-        exp.setAñoIngreso(dtoExperiencia.getAñoIngreso());
-        exp.setAñoEgreso(dtoExperiencia.getAñoEgreso());
+        exp.setAnioIngreso(dtoExperiencia.getAnioIngreso());
+        exp.setAnioEgreso(dtoExperiencia.getAnioEgreso());
         exp.setCargoExp(dtoExperiencia.getCargoExp());
         exp.setDescripcionExp(dtoExperiencia.getDescripcionExp());
         

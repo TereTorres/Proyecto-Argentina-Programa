@@ -8,9 +8,9 @@ public class DtoExperiencia {
     @NotBlank
     private String nombreExp;
     @NotBlank
-    private int añoIngreso;
+    private int anioIngreso;
     @NotBlank
-    private int añoEgreso;
+    private int anioEgreso;
     @NotBlank
     private String cargoExp;
     @NotBlank
@@ -19,10 +19,10 @@ public class DtoExperiencia {
     public DtoExperiencia() {
     }
 
-    public DtoExperiencia(String nombreExp, int añoIngreso, int añoEgreso, String cargoExp, String descripcionExp) {
+    public DtoExperiencia(String nombreExp, int anioIngreso, int anioEgreso, String cargoExp, String descripcionExp) {
         this.nombreExp = nombreExp;
-        this.añoIngreso = añoIngreso;
-        this.añoEgreso = añoEgreso;
+        this.anioIngreso = anioIngreso;
+        this.anioEgreso = anioEgreso;
         this.cargoExp = cargoExp;
         this.descripcionExp = descripcionExp;
     }
@@ -35,20 +35,20 @@ public class DtoExperiencia {
         this.nombreExp = nombreExp;
     }
 
-    public int getAñoIngreso() {
-        return añoIngreso;
+    public int getAnioIngreso() {
+        return anioIngreso;
     }
 
-    public void setAñoIngreso(int añoIngreso) {
-        this.añoIngreso = añoIngreso;
+    public void setAnioIngreso(int anioIngreso) {
+        this.anioIngreso = anioIngreso;
     }
 
-    public int getAñoEgreso() {
-        return añoEgreso;
+    public int getAnioEgreso() {
+        return anioEgreso;
     }
 
-    public void setAñoEgreso(int añoEgreso) {
-        this.añoEgreso = añoEgreso;
+    public void setAnioEgreso(int anioEgreso) {
+        this.anioEgreso = anioEgreso;
     }
 
     public String getCargoExp() {
