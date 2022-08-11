@@ -1,6 +1,6 @@
 .row{
     padding: 25px;
-    width: 50%;
+   
 }
 h2{
     font-family: 'Arial Narrow', Arial, sans-serif;
@@ -15,6 +15,18 @@ ul{
 h4,p{
     display: inline;
 }
-div{
-
+.btn{
+    background-color: #a1b5cb;
+    border-color: #a1b5cb;
+    padding: 5px;
+}
+.btn-sec{
+    background-color: white;
+    border-color: white;
+}
+.bi{
+    color: #a1b5cb;
+}
+.bi-trash3-fill{
+    color: rgb(150, 19, 19);
 }

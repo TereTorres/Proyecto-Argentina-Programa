@@ -19,6 +19,11 @@ import { LoginComponent } from './login/login.component';
 import { interceptorProvider } from './service/interceptor-service';
 import { NuevaExperienciaComponent } from './experiencia/nueva-experiencia.component';
 import { EditarExpComponent } from './experiencia/editar-exp/editar-exp.component';
+import { NuevoNivelComponent } from './educacion/nuevo-nivel/nuevo-nivel.component';
+import { EditarNivelComponent } from './educacion/editar-nivel/editar-nivel.component';
+import { EditarProyectoComponent } from './proyectos/editar-proyecto/editar-proyecto.component';
+import { NuevoProyectoComponent } from './proyectos/nuevo-proyecto/nuevo-proyecto.component';
+import { EditarPersonaComponent } from './acerca-de/editar-persona/editar-persona.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,12 @@ import { EditarExpComponent } from './experiencia/editar-exp/editar-exp.componen
     LoginComponent,
     HomeComponent,
     NuevaExperienciaComponent,
-    EditarExpComponent
+    EditarExpComponent,
+    NuevoNivelComponent,
+    EditarNivelComponent,
+    EditarProyectoComponent,
+    NuevoProyectoComponent,
+    EditarPersonaComponent
     ],
   imports: [
     BrowserModule,

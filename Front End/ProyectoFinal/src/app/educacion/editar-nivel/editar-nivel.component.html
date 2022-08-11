@@ -1,0 +1,25 @@
+<div class="container" *ngIf="edu">
+    <h2>Editar Nivel</h2>
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nivel">Nivel</label>
+                    <input type="text" class="form-control" id="nivel" name="nivel" [(ngModel)]="edu.nivel" required>
+                </div>
+                <div class="form-group">
+                    <label for="institucion">Institución</label>
+                    <input type="text" class="form-control" id="institucion" name="institucion" [(ngModel)]="edu.institucion" required>
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Título</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="edu.titulo" required>
+                </div>
+                <br>
+                <button class="btn btn-primary">
+                    Guardar Cambios
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
