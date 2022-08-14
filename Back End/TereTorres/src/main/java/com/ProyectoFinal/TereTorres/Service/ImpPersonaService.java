@@ -1,42 +1,53 @@
 package com.ProyectoFinal.TereTorres.Service;
 
 import com.ProyectoFinal.TereTorres.Entity.Persona;
-import com.ProyectoFinal.TereTorres.Interface.IPersonaService;
 import com.ProyectoFinal.TereTorres.Repository.IPersonaRepository;
 import java.util.List;
+import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 @Service
-public class ImpPersonaService implements IPersonaService{
-
-    @Autowired IPersonaRepository iPersonaRepository;
-            
-    @Override
-    public List<Persona> getPersona() {
+@Transactional
+public class ImpPersonaService{
+    
+    @Autowired
+    IPersonaRepository iPersonaRepository;
+    
+    
+    
+    public List<Persona> list(){
         
-        List<Persona> listaPersonas = iPersonaRepository.findAll();
-        return listaPersonas;
+        return iPersonaRepository.findAll();
     }
-
-    @Override
-    public void savePersona(Persona per) {
+    
+    public Optional<Persona> getOne(int id){
+        
+        return iPersonaRepository.findById(id);
+    }
+    
+    public Optional<Persona> getByNombre(String nombre){
+        
+        return iPersonaRepository.fingByNombre(nombre);
+    }
+    
+    public void save(Persona per){
         
         iPersonaRepository.save(per);
     }
-
-    @Override
-    public void deletePersona(Long id) {
-        
+    
+    public void delete(int id){
         iPersonaRepository.deleteById(id);
     }
-
-    @Override
-    public Persona findPersona(Long id) {
+    
+    public boolean existsById(int id){
         
-        Persona per = iPersonaRepository.findById(id).orElse(null);
-        return per;
+        return iPersonaRepository.existsById(id);
     }
     
+    public boolean existsByNombre(String nombre){
+        
+        return iPersonaRepository.existsByNombre(nombre);
+    }
 }

@@ -46,7 +46,16 @@ public class EducacionController {
         return new ResponseEntity(new Mensaje("Nivel agregado con éxito"), HttpStatus.OK);
     }
     
-    @PutMapping("edite/{id}")
+    
+    @GetMapping("/detalle/{id}")
+    public ResponseEntity<Educacion> getById(@PathVariable("id") int id){
+        if(!impEducacionService.existsById(id))
+            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
+        Educacion experiencia = impEducacionService.getOne(id).get();
+        return new ResponseEntity(experiencia, HttpStatus.OK);
+    }
+    
+    @PutMapping("editar/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoEducacion dtoEducacion){
         
         if(!impEducacionService.existsById(id))
