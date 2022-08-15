@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Persona } from '../model/persona.model';
+import { Persona } from '../model/persona';
 import { PersonaService } from '../service/persona.service';
 import { TokenService } from '../service/token.service';
 
@@ -10,8 +10,8 @@ import { TokenService } from '../service/token.service';
 })
 export class AcercaDeComponent implements OnInit {
 
-  persona: Persona = new Persona("","","","");
-
+  personas: Persona[] = [];
+  
   constructor(private personaService: PersonaService, private tokenService: TokenService) { }
 
   isLogged = false;
@@ -27,7 +27,20 @@ export class AcercaDeComponent implements OnInit {
   }
 
   cargarPersona(): void{
-    this.personaService.listar().subscribe(data => {this.persona = data});
+
+    this.personaService.listar().subscribe(data => {this.personas = data;})
   }
 
+  delete(id_Persona?: number){
+
+    if(id_Persona != undefined){
+      this.personaService.borrar(id_Persona).subscribe(
+        data => {
+          this.cargarPersona();
+        }, err =>{
+          alert("No es posible borrar la persona seleccionada");
+        }
+      )
+    }
+  } 
 }

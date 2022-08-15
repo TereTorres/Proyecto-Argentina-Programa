@@ -24,6 +24,9 @@ import { EditarNivelComponent } from './educacion/editar-nivel/editar-nivel.comp
 import { EditarProyectoComponent } from './proyectos/editar-proyecto/editar-proyecto.component';
 import { NuevoProyectoComponent } from './proyectos/nuevo-proyecto/nuevo-proyecto.component';
 import { EditarPersonaComponent } from './acerca-de/editar-persona/editar-persona.component';
+import { NuevaPersonaComponent } from './acerca-de/nueva-persona/nueva-persona.component';
+import { EditarHysComponent } from './circle-progress/editar-hys/editar-hys.component';
+import { NuevaHysComponent } from './circle-progress/nueva-hys/nueva-hys.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { EditarPersonaComponent } from './acerca-de/editar-persona/editar-person
     EditarNivelComponent,
     EditarProyectoComponent,
     NuevoProyectoComponent,
-    EditarPersonaComponent
+    EditarPersonaComponent,
+    NuevaPersonaComponent,
+    EditarHysComponent,
+    NuevaHysComponent
     ],
   imports: [
     BrowserModule,

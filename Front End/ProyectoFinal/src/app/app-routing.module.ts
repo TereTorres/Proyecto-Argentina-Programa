@@ -8,6 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { EditarProyectoComponent } from './proyectos/editar-proyecto/editar-proyecto.component';
 import { NuevoProyectoComponent } from './proyectos/nuevo-proyecto/nuevo-proyecto.component';
+import { EditarPersonaComponent } from './acerca-de/editar-persona/editar-persona.component';
+import { NuevaPersonaComponent } from './acerca-de/nueva-persona/nueva-persona.component';
+import { EditarHysComponent } from './circle-progress/editar-hys/editar-hys.component';
+import { NuevaHysComponent } from './circle-progress/nueva-hys/nueva-hys.component';
+
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -17,7 +22,11 @@ const routes: Routes = [
   {path:'nuevonivel', component: NuevoNivelComponent},
   {path:'editarnivel/:id_Educacion', component: EditarNivelComponent},
   {path:'nuevoproyecto', component: NuevoProyectoComponent},
-  {path:'editarproyecto/:id_Proyecto', component: EditarProyectoComponent}
+  {path:'editarproyecto/:id_Proyecto', component: EditarProyectoComponent},
+  {path: 'nuevapersona', component: NuevaPersonaComponent},
+  {path: 'editarpersona/:idpersona', component: EditarPersonaComponent},
+  {path: 'editarhys/:id_Hys', component: EditarHysComponent},
+  {path: 'nuevahys', component: NuevaHysComponent}
 ];
 
 @NgModule({
