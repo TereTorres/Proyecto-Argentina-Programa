@@ -38,7 +38,7 @@ export class ProyectosComponent implements OnInit {
         data => {
           this.cargarProyectos();
         }, err => {
-          alert("No es posible borrar el proyecto seleccionado")
+          alert("No es posible borrar el proyecto seleccionado, necesita permiso de Administrador")
         }
       )
     }

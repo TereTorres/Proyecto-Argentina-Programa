@@ -22,7 +22,7 @@ export class EditarProyectoComponent implements OnInit {
       data =>{
         this.proyectos = data;
       }, err =>{
-        alert("Error al editar el proyecto");
+        alert("Error al editar el proyecto, necesita permiso de Administrador");
         this.router.navigate(['']);
       }
     )
@@ -35,7 +35,7 @@ export class EditarProyectoComponent implements OnInit {
       data =>{
         this.router.navigate(['']);
       }, err =>{
-        alert("Error al editar el proyecto");
+        alert("Error al editar el proyecto, necesita permiso de Administrador");
         this.router.navigate(['']);
       }
     )

@@ -22,7 +22,7 @@ export class EditarNivelComponent implements OnInit {
         data =>{
           this.edu = data;
         },err =>{
-          alert("Error al editar el nivel");
+          alert("Error al editar el nivel, necesita permiso de Administrador");
           this.router.navigate(['']);
         }
       )
@@ -35,7 +35,7 @@ export class EditarNivelComponent implements OnInit {
       data =>{
         this.router.navigate(['']);
       }, err =>{
-        alert("Error al editar el nivel");
+        alert("Error al editar el nivel, necesita permiso de Administrador");
         this.router.navigate(['']);
       }
     )

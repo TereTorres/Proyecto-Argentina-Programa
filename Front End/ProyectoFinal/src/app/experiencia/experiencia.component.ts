@@ -15,7 +15,7 @@ export class ExperienciaComponent implements OnInit {
   constructor(private experienciaService: ExperienciaService, private tokenService: TokenService) { }
 
   isLogged = false;
-
+  
   ngOnInit(): void {
 
     this.cargarExperiencia();
@@ -24,6 +24,7 @@ export class ExperienciaComponent implements OnInit {
     }else {
       this.isLogged = false;
     }
+  
   }
 
   cargarExperiencia(): void{
@@ -38,7 +39,7 @@ export class ExperienciaComponent implements OnInit {
         data => {
           this.cargarExperiencia();
         }, err =>{
-          alert("No es posible borrar la experiencia seleccionada");
+          alert("No es posible borrar la experiencia seleccionada, necesita permiso de Administrador");
         }
       )
     }

@@ -30,7 +30,7 @@ export class NuevaExperienciaComponent implements OnInit {
       data => { alert("Experiencia añadida con éxito");
       this.router.navigate(['']);
     }, err =>{
-      alert("El intento falló");
+      alert("El intento falló, necesita permiso de Administrador");
       this.router.navigate(['']);
     })
   }

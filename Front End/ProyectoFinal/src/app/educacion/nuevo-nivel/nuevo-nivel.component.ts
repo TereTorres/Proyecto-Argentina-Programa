@@ -28,7 +28,7 @@ export class NuevoNivelComponent implements OnInit {
       data => {alert("Nivel añadido con éxito");
       this.router.navigate(['']);
     }, err => {
-      alert("El intento falló");
+      alert("El intento falló, necesita permiso de Administrador");
       this.router.navigate(['']);
     }
 

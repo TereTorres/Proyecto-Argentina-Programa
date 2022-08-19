@@ -27,6 +27,7 @@ import { EditarPersonaComponent } from './acerca-de/editar-persona/editar-person
 import { NuevaPersonaComponent } from './acerca-de/nueva-persona/nueva-persona.component';
 import { EditarHysComponent } from './circle-progress/editar-hys/editar-hys.component';
 import { NuevaHysComponent } from './circle-progress/nueva-hys/nueva-hys.component';
+import { RegistroComponent } from './login/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { NuevaHysComponent } from './circle-progress/nueva-hys/nueva-hys.compone
     EditarPersonaComponent,
     NuevaPersonaComponent,
     EditarHysComponent,
-    NuevaHysComponent
+    NuevaHysComponent,
+    RegistroComponent
     ],
   imports: [
     BrowserModule,

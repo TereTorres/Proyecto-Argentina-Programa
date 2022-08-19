@@ -38,7 +38,7 @@ export class EducacionComponent implements OnInit {
         data => {
           this.cargarEducacion();
         }, err =>{
-          alert("No es posible borrar el nivel seleccionado");
+          alert("No es posible borrar el nivel seleccionado, necesita permiso de Administrador");
         }
       )
     }

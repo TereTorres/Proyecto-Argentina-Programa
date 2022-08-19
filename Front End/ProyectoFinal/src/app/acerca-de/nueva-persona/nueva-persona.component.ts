@@ -27,7 +27,7 @@ export class NuevaPersonaComponent implements OnInit {
       data => {alert("Persona añadida con éxito");
       this.router.navigate(['']);
     }, err =>{
-      alert("El intento falló");
+      alert("El intento falló, necesita permiso de Administrador");
       this.router.navigate(['']);
     }
     )

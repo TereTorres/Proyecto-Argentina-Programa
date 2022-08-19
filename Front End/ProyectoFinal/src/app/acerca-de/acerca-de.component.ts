@@ -38,7 +38,7 @@ export class AcercaDeComponent implements OnInit {
         data => {
           this.cargarPersona();
         }, err =>{
-          alert("No es posible borrar la persona seleccionada");
+          alert("No es posible borrar la persona seleccionada, necesita permiso de Administrador");
         }
       )
     }

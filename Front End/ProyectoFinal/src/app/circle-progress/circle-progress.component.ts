@@ -15,7 +15,7 @@ export class CircleProgressComponent implements OnInit {
   constructor(private hysskillsService: HysskillsService, private tokenSercive: TokenService) {}
    
   isLogged = false;
-
+  
   ngOnInit(): void {
  
     this.cargarHys();
@@ -37,7 +37,7 @@ export class CircleProgressComponent implements OnInit {
         data => {
           this.cargarHys();
         }, err =>{
-          alert("No es posible borrar la habilidad seleccionada");
+          alert("No es posible borrar la habilidad seleccionada, necesita permiso de Administrador");
         }
       )
     }

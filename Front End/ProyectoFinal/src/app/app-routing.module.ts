@@ -12,7 +12,7 @@ import { EditarPersonaComponent } from './acerca-de/editar-persona/editar-person
 import { NuevaPersonaComponent } from './acerca-de/nueva-persona/nueva-persona.component';
 import { EditarHysComponent } from './circle-progress/editar-hys/editar-hys.component';
 import { NuevaHysComponent } from './circle-progress/nueva-hys/nueva-hys.component';
-
+import { RegistroComponent } from './login/registro/registro.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -26,7 +26,8 @@ const routes: Routes = [
   {path: 'nuevapersona', component: NuevaPersonaComponent},
   {path: 'editarpersona/:idpersona', component: EditarPersonaComponent},
   {path: 'editarhys/:id_Hys', component: EditarHysComponent},
-  {path: 'nuevahys', component: NuevaHysComponent}
+  {path: 'nuevahys', component: NuevaHysComponent},
+  {path: 'registro', component: RegistroComponent}
 ];
 
 @NgModule({

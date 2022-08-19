@@ -15,9 +15,13 @@ export class RegistroComponent implements OnInit {
   nombreUsuario: string = '';
   email: string = '';
   password: string = '';
-  authorities: string = '';
+  authorities: string []= [];
+  rol: string = 'ROLE_USER';
+  
+  constructor(private authService: AuthService, private router: Router) { 
+   
+  }
 
-  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -25,15 +29,17 @@ export class RegistroComponent implements OnInit {
   
   onCreate():void{
 
+    this.authorities.push(this.rol);
     const auth = new NuevoUsuario(this.nombre, this.nombreUsuario,
       this.email, this.password, this.authorities);
+    
 
     this.authService.nuevo(auth).subscribe(
       data => {alert("Usuario añadido con éxito");
       this.router.navigate(['/login']);
     }, err => {
       alert("El intento falló");
-      this.router.navigate(['']);
+      this.router.navigate(['/login']);
     }
 
     )

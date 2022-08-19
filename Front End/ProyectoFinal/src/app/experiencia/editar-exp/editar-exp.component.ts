@@ -22,7 +22,7 @@ export class EditarExpComponent implements OnInit {
       data =>{
         this.expLab = data;
       },err =>{
-        alert("Error al editar la experiencia");
+        alert("Error al editar la experiencia, necesita permiso de Administrador");
         this.router.navigate(['']);
       }
     )

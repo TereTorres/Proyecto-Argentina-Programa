@@ -28,7 +28,7 @@ export class NuevoProyectoComponent implements OnInit {
       data => {alert("Proyecto añadido con éxito");
       this.router.navigate(['']);
     }, err => {
-      alert("El intento falló");
+      alert("El intento falló, necesita permiso de Administrador");
       this.router.navigate(['']);
     }
     )
