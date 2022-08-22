@@ -8,7 +8,7 @@ import { Hysskills } from '../model/hysskills';
 })
 export class HysskillsService {
 
-  hysURL = 'http://localhost:8080/hys/'
+  hysURL = 'https://bkprueba.herokuapp.com/hys/'
 
   constructor(private httpClient: HttpClient) { }
 

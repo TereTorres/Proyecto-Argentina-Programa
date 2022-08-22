@@ -18,7 +18,7 @@ export class EditarPersonaComponent implements OnInit {
 
   ngOnInit(): void {
 
-    const id = this.activatedRouter.snapshot.params[1];
+    const id = this.activatedRouter.snapshot.params['id_Persona'];
     this.personaService.detalle(id).subscribe(
       data =>{
         this.personas = data;

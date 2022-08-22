@@ -1,6 +1,11 @@
 .row{
     margin-left: 30px;
-   
+    background-color: #ecf4fa;
+}
+.titulo{
+    background-color: teal;
+    padding: 20px;
+    color: azure;
 }
 h2{
     font-family: 'Arial Narrow', Arial, sans-serif;
